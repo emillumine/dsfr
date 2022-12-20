@@ -27,15 +27,9 @@
       @include padding-bottom(2v);
       @include padding-right(6v);
       @include display-flex(column, stretch, center);
-      background-size: 100% 1px, 1px 100%, 100% 1px, 1px 100%;
-      background-repeat: no-repeat, no-repeat, no-repeat, no-repeat;
-      background-position: 0 0, 100% 0, 0 100%, 0 0;
-
-      @include before {
-        @include size(4v, 4v);
-        @include absolute(50%, null, null, 7v);
-        @include margin-top(-2v);
-      }
+      background-size: 100% 1px, 1px 100%, 100% 1px, 1px 100%, #{space(4.5v)} #{space(4.5v)}, #{space(4.5v)} #{space(4.5v)};
+      background-repeat: no-repeat, no-repeat, no-repeat, no-repeat, no-repeat, no-repeat;
+      background-position: 0 0, 100% 0, 0 100%, 0 0, #{space(7v)} 50%, #{space(7v) 50%};
 
       @include after('', block) {
         @include absolute(0, 0, 0, 0, 100%, 100%);

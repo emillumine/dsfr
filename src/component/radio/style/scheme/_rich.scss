@@ -16,19 +16,13 @@
 
     input[type="radio"] {
       + label {
-        @include color.background-image((border default grey) (border default grey) (border default grey) (border default grey), (legacy: $legacy));
+        @include color.background-image((action-high blue-france) (action-high blue-france) (border default grey), (legacy: $legacy), '#{radio-rich-background-image(false)}');
         @include color.background((background default grey), (legacy: $legacy));
-
-        @include before {
-          @include color.box-shadow((action-high grey) (background default grey) (background action-high blue-france), (legacy:$legacy), radio-box-shadow(true, sm));
-        }
       }
 
       @include disabled.selector {
         + label {
-          @include before {
-            @include color.box-shadow((disabled grey) (background default grey) (text disabled grey), (legacy:$legacy), radio-box-shadow(true, sm));
-          }
+          @include color.background-image((disabled grey) (disabled grey) (border default grey), (legacy: $legacy), '#{radio-rich-background-image(false)}');
         }
 
         ~ #{selector.ns(radio-rich__pictogram)} {
@@ -40,11 +34,7 @@
 
       &:checked {
         + label {
-          @include color.background-image((action-high blue-france) (action-high blue-france) (action-high blue-france) (action-high blue-france), (legacy: $legacy));
-
-          @include before {
-            @include color.box-shadow((action-high grey) (background default grey) (background action-high blue-france), (legacy:$legacy), radio-box-shadow(true, sm));
-          }
+          @include color.background-image((action-high blue-france) (action-high blue-france) (action-high blue-france), (legacy: $legacy), '#{radio-rich-background-image(true)}');
         }
 
         ~ #{selector.ns(radio-rich__pictogram)} {
@@ -53,15 +43,69 @@
 
         @include disabled.selector {
           + label {
-            @include color.background-image((text disabled grey) (text disabled grey) (text disabled grey) (text disabled grey), (legacy: $legacy));
-
-            @include before {
-              @include color.box-shadow((disabled grey) (background default grey) (text disabled grey), (legacy:$legacy), radio-box-shadow(true, sm));
-            }
+            @include color.background-image((disabled grey) (disabled grey) (text disabled grey), (legacy: $legacy), '#{radio-rich-background-image(true)}');
           }
 
           ~ #{selector.ns(radio-rich__pictogram)} {
             @include color.background-image((text disabled grey) (text disabled grey) (text disabled grey) (border default grey), (legacy: $legacy));
+          }
+        }
+      }
+    }
+  }
+
+  #{ns(fieldset)} {
+    &--error {
+      #{ns(radio-rich)} {
+        input[type="radio"] {
+          & + label {
+            @include color.background-image((border plain error) (action-high blue-france) (border default grey), (legacy: $legacy), '#{radio-rich-background-image(false)}');
+          }
+
+          &:checked + label {
+            @include color.background-image((border plain error) (action-high blue-france) (action-high blue-france), (legacy: $legacy), '#{radio-rich-background-image(true)}');
+          }
+        }
+      }
+    }
+
+    &--valid {
+      #{ns(radio-rich)} {
+        input[type="radio"] {
+          & + label {
+            @include color.background-image((border plain success) (action-high blue-france) (border default grey), (legacy: $legacy), '#{radio-rich-background-image(false)}');
+          }
+
+          &:checked + label {
+            @include color.background-image((border plain success) (action-high blue-france) (action-high blue-france), (legacy: $legacy), '#{radio-rich-background-image(true)}');
+          }
+        }
+      }
+    }
+
+    &--info {
+      #{ns(radio-rich)} {
+        input[type="radio"] {
+          & + label {
+            @include color.background-image((border plain info) (action-high blue-france) (border default grey), (legacy: $legacy), '#{radio-rich-background-image(false)}');
+          }
+
+          &:checked + label {
+            @include color.background-image((border plain info) (action-high blue-france) (action-high blue-france), (legacy: $legacy), '#{radio-rich-background-image(true)}');
+          }
+        }
+      }
+    }
+
+    @include disabled.selector {
+      #{ns(radio-rich)} {
+        input[type="radio"] {
+          & + label {
+            @include color.background-image((disabled grey) (disabled grey) (border default grey), (legacy: $legacy), '#{radio-rich-background-image(false)}');
+          }
+
+          &:checked + label {
+            @include color.background-image((disabled grey) (disabled grey) (border default grey), (legacy: $legacy), '#{radio-rich-background-image(true)}');
           }
         }
       }
