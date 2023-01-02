@@ -25,9 +25,6 @@
         @include size(100%);
       }
 
-      /**
-      * On ajoute l'icône check-line en taille sm via un pseudo element before
-      */
       @include before('', block) {
         @include absolute(0, null, null, -8v);
         @include size(6v, 6v);

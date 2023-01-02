@@ -13,8 +13,8 @@
 
   input[type="radio"] {
     @include size(4v, 4v);
-    left: #{space(7v)};
-    top: calc(50% - #{space(2v)});
+    left: spacing.space(7v);
+    top: spacing.space(calc(50% - 2v));
 
     + label {
       position: initial;
@@ -27,9 +27,9 @@
       @include padding-bottom(2v);
       @include padding-right(6v);
       @include display-flex(column, stretch, center);
-      background-size: 100% 1px, 1px 100%, 100% 1px, 1px 100%, #{space(4.5v)} #{space(4.5v)}, #{space(4.5v)} #{space(4.5v)};
+      background-size: 100% 1px, 1px 100%, 100% 1px, 1px 100%, spacing.space(4.5v) spacing.space(4.5v), spacing.space(4.5v) spacing.space(4.5v);
       background-repeat: no-repeat, no-repeat, no-repeat, no-repeat, no-repeat, no-repeat;
-      background-position: 0 0, 100% 0, 0 100%, 0 0, #{space(7v)} 50%, #{space(7v) 50%};
+      background-position: 0 0, 100% 0, 0 100%, 0 0, spacing.space(7v) 50%, spacing.space(7v) 50%;
 
       @include after('', block) {
         @include absolute(0, 0, 0, 0, 100%, 100%);

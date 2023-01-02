@@ -3,6 +3,8 @@
 /// @group radio
 ////
 
+@use 'module/spacing';
+
 #{ns-group(radio)}--sm {
   input[type="radio"] {
     @include size(4v, 4v);
@@ -10,12 +12,12 @@
 
     & + label {
       @include padding-left(6v);
-      background-position: calc(-#{space(0.5v)} + 1px) calc(#{space(1v)} - 1px), calc(-#{space(0.5v)} + 1px) calc(#{space(1v)} - 1px);
-      background-size: #{space(4.5v)} #{space(4.5v)}, #{space(4.5v)} #{space(4.5v)};
+      background-position: spacing.space(calc(-0.5v + 1px)) spacing.space(calc(1v - 1px)), spacing.space(calc(-0.5v + 1px)) spacing.space(calc(1v - 1px));
+      background-size: spacing.space(4.5v) spacing.space(4.5v), spacing.space(4.5v) spacing.space(4.5v);
 
       @include before {
         @include size(4v, 4v);
-        border-radius: #{space(4v)};
+        border-radius: spacing.space(4v);
         @include margin-left(-6v);
       }
     }
