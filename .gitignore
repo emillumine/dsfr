@@ -2,7 +2,13 @@ node_modules/
 public/
 .config/
 .vscode/
-.yarn/
 /dist/
 /example/
 /standalone/
+.pnp.*
+.yarn/*
+!.yarn/patches
+!.yarn/plugins
+!.yarn/releases
+!.yarn/sdks
+!.yarn/versions
