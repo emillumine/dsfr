@@ -13,10 +13,6 @@
 
     &__btn {
       @include color.text(action-high blue-france, (legacy:$legacy));
-
-      &[aria-expanded="true"] {
-        @include color.background(open blue-france, (legacy:$legacy));
-      }
     }
   }
 }

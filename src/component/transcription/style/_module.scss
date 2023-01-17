@@ -17,6 +17,7 @@
   &__btn {
     @include _build-link-base;
     @include _link-display(flex);
+    @include font-weight('medium');
     @include nest-transcription-button(arrow-down-s-line);
     @include size(100%);
     text-align: left;
