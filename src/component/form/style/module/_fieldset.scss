@@ -6,6 +6,9 @@
   @include padding(0 1v);
   @include display-flex(row, flex-end, null, wrap);
   border: 0;
+  background-repeat: repeat-y;
+  background-position: 0 0;
+  background-size: 2px 100%;
 
   &__legend {
     @include margin-bottom(4v);
@@ -23,28 +26,6 @@
       @include margin-top(2v);
       @include font-weight(regular);
     }
-  }
-
-  &--valid,
-  &--valid &__legend,
-  &--error,
-  &--error &__legend,
-  &--info,
-  &--info &__legend {
-    background-repeat: no-repeat;
-    background-position: 0 0;
-  }
-
-  &--valid,
-  &--error,
-  &--info {
-    background-size: spacing.space(2px calc(100% - (4v)));
-  }
-
-  &--valid &__legend,
-  &--error &__legend,
-  &--info &__legend {
-    background-size: 2px 100%;
   }
 
   &__element {
@@ -110,7 +91,7 @@
     @include padding-x(2v);
 
     > #{ns(message)}:last-child {
-      @include margin-bottom(4v);
+      @include margin-bottom(0);
     }
   }
 }

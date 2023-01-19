@@ -10,6 +10,7 @@
   @include relative;
   @include display-flex(row, center);
   @include max-width(100%);
+  @include min-height(22v);
 
   input[type="radio"] {
     @include size(4v, 4v);
