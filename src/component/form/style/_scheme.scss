@@ -87,7 +87,8 @@
       @include color.text(title grey, (legacy:$legacy));
     }
 
-    &--error {
+    &--error,
+    &--error &__legend {
       @include color.background-image(border plain error, (legacy:$legacy));
     }
 
@@ -96,7 +97,8 @@
       @include color.text(default error, (legacy:$legacy));
     }
 
-    &--valid {
+    &--valid,
+    &--valid &__legend {
       @include color.background-image(border plain success, (legacy:$legacy));
     }
 
@@ -105,7 +107,8 @@
       @include color.text(default success, (legacy:$legacy));
     }
 
-    &--info {
+    &--info,
+    &--info &__legend {
       @include color.background-image(border plain info, (legacy:$legacy));
     }
 
