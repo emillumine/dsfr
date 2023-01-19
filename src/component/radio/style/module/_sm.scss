@@ -12,7 +12,7 @@
 
     & + label {
       @include padding-left(6v);
-      background-position: spacing.space(calc(-0.5v + 1px)) spacing.space(calc(1v - 1px)), spacing.space(calc(-0.5v + 1px)) spacing.space(calc(1v - 1px));
+      background-position: spacing.space('calc(-0.5v + 1px)') spacing.space('calc(1v - 1px)'), spacing.space('calc(-0.5v + 1px)') spacing.space('calc(1v - 1px)');
       background-size: spacing.space(4.5v) spacing.space(4.5v), spacing.space(4.5v) spacing.space(4.5v);
 
       @include before {
