@@ -22,7 +22,7 @@
     justify-content: space-between;
     @include padding-left(0);
     width: calc(100% - #{space(10v)});
-    flex: 1;
+    flex: 1 1 100%;
 
     @include before {
       flex-shrink: 0;
